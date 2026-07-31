@@ -1,0 +1,17 @@
+{
+  "name": "jstirnaman",
+  "description": "Jason Stirnaman's personal Claude Code skills, focused on technical writing and developer documentation.",
+  "owner": {
+    "name": "Jason Stirnaman",
+    "url": "https://github.com/jstirnaman"
+  },
+  "plugins": [
+    {
+      "name": "jstirnaman-skills",
+      "source": "./",
+      "description": "Technical-writing skills for documentation and user-facing output, following the Google developer documentation style guide.",
+      "category": "documentation",
+      "tags": ["writing", "documentation", "style-guide", "google-style"]
+    }
+  ]
+}

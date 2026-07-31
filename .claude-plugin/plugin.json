@@ -1,0 +1,11 @@
+{
+  "name": "jstirnaman-skills",
+  "description": "Technical-writing skills for documentation and user-facing output, following the Google developer documentation style guide.",
+  "version": "0.1.0",
+  "author": {
+    "name": "Jason Stirnaman",
+    "url": "https://github.com/jstirnaman"
+  },
+  "repository": "https://github.com/jstirnaman/skills",
+  "license": "MIT"
+}
