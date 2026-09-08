@@ -1,39 +1,61 @@
 ---
 name: pr-body
-description: Structures pull request descriptions into four fixed sections — What changed, Why, Impact, Verification. Use when writing or revising a PR body, or when the user asks to draft, fill in, or fix up a pull request description.
+description: Structures pull request descriptions into four fixed sections: What changed, Why, Impact, Verification. Use when writing or revising a PR body, or when the user asks to draft, fill in, or fix up a pull request description.
 ---
 
 # PR body structure
 
-Write the PR description in exactly four sections, in this order. Omit a section only if it is genuinely empty (e.g., a docs-only PR has no user-facing Impact) — state that explicitly rather than deleting the heading.
+Write the PR description in these four sections, in this order.
+Omit a section only when it's genuinely empty.
+A docs-only PR, for example, has no user-facing impact.
+Say that under the heading rather than deleting the heading.
 
 ## What changed
 
-Facts about the diff, not the reasoning behind it. Short bullets or short sentences. Each line states one change: what was added, removed, renamed, or behaves differently. No justification here — that belongs in Why.
+State facts about the diff.
+Leave the reasoning for Why.
+Use short bullets or short sentences.
+Give each line one change: what you added, removed, renamed, or made behave
+differently.
 
 ## Why
 
-The narrative justification, in a few sentences. What problem, request, bug, or constraint drove this change. Reference the issue/ticket if one exists. This is prose, not a bullet list — it should read as a short explanation someone unfamiliar with the backstory can follow.
+Explain what drove the change, in a few sentences.
+Name the problem, request, bug, or constraint behind it.
+Link the issue or ticket when one exists.
+Write prose, not a bullet list.
+A reader who doesn't know the backstory should be able to follow it.
 
 ## Impact
 
-Who or what is affected, and how:
-- **Users/customers**: does behavior, output, or UI change for them? Is it visible or silent?
-- **System behavior**: performance, error handling, backward compatibility, data migrations, config/env changes.
-- If there is no user-facing or system-behavior impact (internal refactor, test-only change), say so explicitly: "No user-facing impact."
+Say who and what the change affects, and how.
+
+- **Users and customers**: state whether behavior, output, or the UI changes for
+  them, and whether they can see the change happen.
+- **System behavior**: cover performance, error handling, backward
+  compatibility, data migrations, and config or environment changes.
+- **Neither**: say so directly. Write "No user-facing impact." An internal
+  refactor or a test-only change usually lands here.
 
 ## Verification
 
-What was checked and what the reviewer or CI should check:
-- Automated tests run (which suites, and whether they're new or existing)
-- Manual validation performed (steps taken, what was observed)
-- Checks still needed before merge, if any (e.g., "needs a staging smoke test")
+State what you checked, and what the reviewer or CI still should.
+
+- Automated tests you ran: which suites, and whether they're new or existing.
+- Manual validation you performed: the steps you took, and what you observed.
+- Checks still needed before merge, such as a staging smoke test.
 
 ## Rules
 
-- Pull facts from the actual diff and commit history — don't invent changes, impact, or verification steps that didn't happen.
-- Keep "What changed" factual and "Why" persuasive-free but explanatory; don't blend the two.
-- If impact or verification is unknown, say "not yet verified" rather than omitting the section or guessing.
-- Match the terse, factual tone the repository already uses in its PR conventions.
+- Pull every fact from the actual diff and commit history.
+  Don't invent changes, impact, or verification steps that didn't happen.
+- Keep What changed factual.
+  Keep Why explanatory without selling the change.
+  Don't blend the two.
+- When impact or verification is unknown, write "not yet verified."
+  Don't omit the section, and don't guess.
+- Match the terse, factual tone the repository already uses in its PR
+  conventions.
 - Apply the `gdd-style` skill's prose rules within each section.
-- This skill governs body structure and content only. The `open-pr` skill gathers the facts and opens the PR.
+- This skill governs body structure and content only.
+  The `open-pr` skill gathers the facts and opens the PR.

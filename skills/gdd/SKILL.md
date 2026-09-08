@@ -1,6 +1,6 @@
 ---
 name: gdd
-description: Rewrite a file, a selection, or inline text in Google developer documentation style. Edits a named file in place. Use the gdd-style skill instead to apply the style to every response for the rest of the session.
+description: Rewrite a file, a selection, or inline text in Google developer documentation style. Edits a named file in place. Use the gdd-style skill instead to load the rules and apply them to everything written from then on.
 argument-hint: "[file, selection, or instructions]"
 disable-model-invocation: true
 ---

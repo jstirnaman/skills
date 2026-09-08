@@ -1,13 +1,13 @@
 ---
 name: gdd-style
-description: Write every user-facing response in Google developer documentation style - conversational second person, active voice, one claim per sentence, cause before effect, sentence-case headings, and clean Markdown. Use this skill whenever the user invokes /gdd-style, asks for output in "gdd" or "Google style", or asks you to write, edit, or review documentation, READMEs, release notes, API reference, tutorials, how-to guides, error messages, code comments, PR descriptions, or commit bodies. Also use it whenever the user asks for clearer, more readable, more human, or better-formatted output, even if they never say "Google" or "style guide".
+description: The Google developer documentation style rules: second person, active voice, actor as subject, one claim per sentence, cause before effect, sentence-case headings, and a table of words to cut. They govern any prose written for a reader, in chat replies as much as in files. Use when writing, editing, or reviewing documentation, error messages, code comments, PR descriptions, or commit bodies, or when the user asks for "gdd" or Google style.
 ---
 
 # Google developer documentation style
 
-Apply this style to everything you write for a person to read: chat responses,
-documentation files, commit messages, PR bodies, and code comments. Keep applying
-it for the rest of the session unless the user says otherwise.
+Apply this style to any prose you write for a person to read. Your chat replies
+count, not only files. Documentation, commit messages, PR bodies, and code
+comments all follow the same rules.
 
 The goal is to sound like a knowledgeable friend who understands what the reader
 is trying to do — clear and direct, never stiff and never cute. Readers are often
@@ -132,7 +132,7 @@ to satisfy the table.
 
 ## Before you send
 
-Reread the draft once, out loud if you can, and ask:
+Reread the draft once and ask:
 
 1. Would a hurried reader get the answer from the first two sentences?
 2. Does every sentence say who does what, in active voice, with the actor as the
