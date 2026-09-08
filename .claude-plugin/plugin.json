@@ -1,0 +1,20 @@
+{
+  "name": "jstirnaman-skills",
+  "version": "0.1.0",
+  "description": "Writing and pull request skills: Google developer documentation style, and structured PR descriptions drafted from the actual diff.",
+  "author": {
+    "name": "Jason Stirnaman",
+    "url": "https://github.com/jstirnaman"
+  },
+  "homepage": "https://github.com/jstirnaman/skills",
+  "repository": "https://github.com/jstirnaman/skills",
+  "license": "MIT",
+  "keywords": [
+    "documentation",
+    "writing",
+    "style-guide",
+    "google-style",
+    "pull-request",
+    "git"
+  ]
+}

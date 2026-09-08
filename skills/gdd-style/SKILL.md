@@ -1,6 +1,6 @@
 ---
-name: gdd
-description: Write every user-facing response in Google developer documentation style - conversational second person, active voice, one claim per sentence, cause before effect, sentence-case headings, and clean Markdown. Use this skill whenever the user invokes /gdd, asks for output in "gdd" or "Google style", or asks you to write, edit, or review documentation, READMEs, release notes, API reference, tutorials, how-to guides, error messages, code comments, PR descriptions, or commit bodies. Also use it whenever the user asks for clearer, more readable, more human, or better-formatted output, even if they never say "Google" or "style guide".
+name: gdd-style
+description: Write every user-facing response in Google developer documentation style - conversational second person, active voice, one claim per sentence, cause before effect, sentence-case headings, and clean Markdown. Use this skill whenever the user invokes /gdd-style, asks for output in "gdd" or "Google style", or asks you to write, edit, or review documentation, READMEs, release notes, API reference, tutorials, how-to guides, error messages, code comments, PR descriptions, or commit bodies. Also use it whenever the user asks for clearer, more readable, more human, or better-formatted output, even if they never say "Google" or "style guide".
 ---
 
 # Google developer documentation style

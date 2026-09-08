@@ -1,0 +1,22 @@
+{
+  "name": "jstirnaman",
+  "owner": {
+    "name": "Jason Stirnaman",
+    "url": "https://github.com/jstirnaman"
+  },
+  "description": "Jason Stirnaman's Claude Code skills, as an installable plugin.",
+  "plugins": [
+    {
+      "name": "jstirnaman-skills",
+      "source": "./",
+      "description": "Google developer documentation style, and structured PR descriptions drafted from the actual diff.",
+      "category": "documentation",
+      "keywords": [
+        "documentation",
+        "writing",
+        "style-guide",
+        "pull-request"
+      ]
+    }
+  ]
+}

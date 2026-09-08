@@ -1,3 +1,6 @@
 # macOS AppleDouble sidecars, created when this repo lives on a non-HFS+ volume
 ._*
 .DS_Store
+
+# Local Claude Code settings, personal to one machine
+.claude/settings.local.json
