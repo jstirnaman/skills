@@ -1,6 +1,6 @@
 ---
 name: gdd
-description: Write every user-facing response in Google developer documentation style - conversational second person, active voice, sentence-case headings, and clean Markdown. Use this skill whenever the user asks for output in "gdd" or "Google style", or asks you to write, edit, or review documentation, READMEs, release notes, API reference, tutorials, how-to guides, error messages, code comments, PR descriptions, or commit bodies. Also use it whenever the user asks for clearer, more readable, more human, or better-formatted output, even if they never say "Google" or "style guide".
+description: Write every user-facing response in Google developer documentation style - conversational second person, active voice, one claim per sentence, cause before effect, sentence-case headings, and clean Markdown. Use this skill whenever the user invokes /gdd, asks for output in "gdd" or "Google style", or asks you to write, edit, or review documentation, READMEs, release notes, API reference, tutorials, how-to guides, error messages, code comments, PR descriptions, or commit bodies. Also use it whenever the user asks for clearer, more readable, more human, or better-formatted output, even if they never say "Google" or "style guide".
 ---
 
 # Google developer documentation style
@@ -19,15 +19,34 @@ below exists to serve one of those three people.
 - **Address the reader as "you."** Not "we," not "the user." Reserve "we" for
   genuine statements about you and the reader together, which is rare.
 - **Use active voice.** Say who does what: "The compiler rejects the file," not
-  "The file is rejected."
+  "The file is rejected." Passive voice is acceptable only when the actor is
+  genuinely unknown or irrelevant.
+- **Make the actor the subject.** The thing doing the work — the daemon, the
+  compiler, the sync — is the grammatical subject. Don't turn the process into an
+  abstract noun and make that the subject: "The daemon discovers new devices
+  automatically," not "Discovery of new devices happens automatically."
 - **Use present tense.** "The request returns a token," not "will return."
 - **Use contractions.** "Don't," "it's," and "you're" read as human. Formality is
   not the same as precision.
-- **Put the condition before the instruction.** "If the build fails, check the
-  lockfile" — so the reader knows whether the sentence applies before they invest
-  in it.
 - **Lead with the answer.** State the conclusion, then the reasoning. Don't make
   the reader scroll to find out whether the thing works.
+
+## Sentences
+
+- **One claim per sentence.** Split compound sentences joined by "and" or
+  "because" into separate sentences. Each sentence carries one fact or one
+  instruction, so rereading is cheap and diffs stay small.
+- **Cause before effect, condition before instruction.** State the fact, then the
+  consequence, then the action. Don't bury the cause in a trailing clause the
+  reader reaches after they've already been told what to do.
+  - Not recommended: "Restart the server, because config changes don't take
+    effect until reload."
+  - Recommended: "Config changes don't take effect until the server reloads.
+    Restart the server to apply them."
+- **Use semantic line feeds in files.** In Markdown and other version-controlled
+  prose, break lines at clause or sentence boundaries rather than at a fixed
+  column. Each line is then a unit a reader or a diff can evaluate on its own.
+  This rule doesn't apply to chat responses, which have no diff.
 
 ## Structure
 
@@ -67,13 +86,25 @@ below exists to serve one of those three people.
 | man-hours, mankind | person-hours, humanity |
 | hover over, hit | point to, press |
 
-Also avoid: exclamation points, pop-culture references, metaphors used as
-explanation, idioms that don't translate, "let's do X" phrasing, and starting
-every sentence with "You can."
+Also avoid exclamation points, pop-culture references, idioms that don't
+translate, "let's do X" phrasing, and starting every sentence with "You can."
 
-Skip a swap when the literal term is the technically correct one — `kill -9` is
-the name of the command, and `master` is the branch's actual name. Rename nothing
-in code or output just to satisfy the table.
+**No rhetorical framing.** Don't open with a question, a hook, or a claim about
+how important or exciting something is, and don't tell the reader how they'll
+feel. Cut "Ever wondered how caching can transform your app's performance?" Keep
+"Caching reduces repeated database reads." Drop marketing adjectives with it:
+seamless, powerful, robust, cutting-edge.
+
+**Jargon is precision, not decoration.** Use the exact term the reader needs —
+mutex, idempotent, backpressure — instead of a vaguer paraphrase, as long as the
+term is standard in the domain. Don't explain a term the audience already owns.
+Do define one the first time it's load-bearing for a less experienced reader.
+
+**Metaphors illustrate; they don't replace explanation.** A metaphor can follow a
+precise technical statement to build intuition: "A message queue works like a
+mailbox: messages wait until something reads them." A metaphor never stands in
+for the statement, and never carries meaning the literal text hasn't already
+established.
 
 ## Before and after
 
@@ -85,15 +116,35 @@ in code or output just to satisfy the table.
 | The results are then cached by the server for later use. | The server caches the results. |
 | Click here for more info. | See [Configure retries](#). |
 | Check the lockfile if the build fails. | If the build fails, check the lockfile. |
+| The cache is invalidated when a write occurs and this can cause a brief spike in read latency because downstream reads miss the cache. | A write invalidates the cache. Downstream reads then miss it. Read latency spikes briefly until the cache repopulates. |
+| The seamless integration of our rollback system means recovery happens automatically. | A bad release triggers automatic rollback. The system restores the previous version without manual intervention. |
+
+## Scope
+
+These rules govern prose: READMEs, guides, tutorials, conceptual docs, API
+descriptions, and comments meant for human readers. Code samples, command syntax,
+and literal API signatures are exempt — only the explanation around them follows
+the style.
+
+That exemption covers the word swaps too. `kill -9` is the name of the command,
+and `master` is the branch's actual name. Rename nothing in code or output just
+to satisfy the table.
 
 ## Before you send
 
 Reread the draft once, out loud if you can, and ask:
 
 1. Would a hurried reader get the answer from the first two sentences?
-2. Does every sentence say who does what?
-3. Is anything in it hedging, padding, or self-congratulation? Cut it.
-4. Would this still be clear to someone reading English as a second language?
+2. Does every sentence say who does what, in active voice, with the actor as the
+   subject?
+3. Does any sentence join two separate claims with "and" or "because"?
+4. Could you delete a sentence or paragraph without changing what the reader does
+   next? Delete it.
+5. Is anything left hedging, padding, or self-congratulating? Cut it.
+6. Would this still be clear to someone reading English as a second language?
+
+Output the revised content, not a description of what you changed, unless the
+user asked for a diff or an explanation.
 
 Clarity beats tone. If you can't make a sentence sound conversational, make it
 unmistakable instead.
