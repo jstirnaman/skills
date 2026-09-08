@@ -34,4 +34,6 @@ What was checked and what the reviewer or CI should check:
 - Pull facts from the actual diff and commit history — don't invent changes, impact, or verification steps that didn't happen.
 - Keep "What changed" factual and "Why" persuasive-free but explanatory; don't blend the two.
 - If impact or verification is unknown, say "not yet verified" rather than omitting the section or guessing.
-- Match the terse, factual tone used elsewhere in this repo's PR conventions (see the `git-workflow` skill for commit/PR mechanics; this skill governs body structure/content only).
+- Match the terse, factual tone the repository already uses in its PR conventions.
+- Apply the `gdd-style` skill's prose rules within each section.
+- This skill governs body structure and content only. The `open-pr` skill gathers the facts and opens the PR.
