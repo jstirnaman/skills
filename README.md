@@ -5,7 +5,7 @@ Claude Code skills for writing documentation and pull requests.
 ## Install
 
 ```
-/plugin marketplace add jstirnaman/skills
+/plugin marketplace add git@github.com:jstirnaman/skills.git
 /plugin install jstirnaman-skills@jstirnaman
 ```
 
