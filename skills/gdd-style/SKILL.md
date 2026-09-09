@@ -1,6 +1,6 @@
 ---
 name: gdd-style
-description: The Google developer documentation style rules: second person, active voice, actor as subject, one claim per sentence, cause before effect, sentence-case headings, and a table of words to cut. They govern any prose written for a reader, in chat replies as much as in files. Use when writing, editing, or reviewing documentation, error messages, code comments, PR descriptions, or commit bodies, or when the user asks for "gdd" or Google style.
+description: "The Google developer documentation style rules: second person, active voice, actor as subject, one claim per sentence, cause before effect, sentence-case headings, and a table of words to cut. They govern any prose written for a reader, in chat replies as much as in files. Use when writing, editing, or reviewing documentation, error messages, code comments, PR descriptions, or commit bodies, or when the user asks for 'gdd' or Google style."
 ---
 
 # Google developer documentation style

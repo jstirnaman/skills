@@ -1,0 +1,42 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "jstirnaman-skills",
+  "version": "0.1.1",
+  "description": "Writing and pull request skills: Google developer documentation style, structured PR descriptions, and committable prr review suggestions.",
+  "author": {
+    "name": "Jason Stirnaman",
+    "url": "https://github.com/jstirnaman"
+  },
+  "homepage": "https://github.com/jstirnaman/skills",
+  "repository": "https://github.com/jstirnaman/skills",
+  "license": "MIT",
+  "keywords": [
+    "documentation",
+    "writing",
+    "style-guide",
+    "google-style",
+    "pull-request",
+    "code-review",
+    "prr",
+    "git"
+  ],
+  "extensions": {
+    "com.openai": {
+      "interface": {
+        "displayName": "Jstirnaman Skills",
+        "shortDescription": "Writing and pull request workflows",
+        "longDescription": "Skills for Google developer documentation style, pull request descriptions, and committable review suggestions.",
+        "developerName": "Jason Stirnaman",
+        "category": "Productivity",
+        "capabilities": [
+          "Write"
+        ],
+        "defaultPrompt": [
+          "Rewrite this text in Google developer documentation style.",
+          "Draft a pull request description for this branch.",
+          "Write committable suggestions for this prr review."
+        ]
+      }
+    }
+  }
+}

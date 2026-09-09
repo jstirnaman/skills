@@ -1,6 +1,6 @@
 ---
 name: pr-body
-description: Structures pull request descriptions into four fixed sections: What changed, Why, Impact, Verification. Use when writing or revising a PR body, or when the user asks to draft, fill in, or fix up a pull request description.
+description: "Structures pull request descriptions into four fixed sections: What changed, Why, Impact, Verification. Use when writing or revising a PR body, or when the user asks to draft, fill in, or fix up a pull request description."
 ---
 
 # PR body structure
