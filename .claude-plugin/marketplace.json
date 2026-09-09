@@ -9,13 +9,15 @@
     {
       "name": "jstirnaman-skills",
       "source": "./",
-      "description": "Google developer documentation style, and structured PR descriptions drafted from the actual diff.",
+      "description": "Google developer documentation style, structured PR descriptions, and committable prr review suggestions.",
       "category": "documentation",
       "keywords": [
         "documentation",
         "writing",
         "style-guide",
-        "pull-request"
+        "pull-request",
+        "code-review",
+        "prr"
       ]
     }
   ]
