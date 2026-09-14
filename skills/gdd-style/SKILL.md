@@ -25,6 +25,9 @@ below exists to serve one of those three people.
   compiler, the sync — is the grammatical subject. Don't turn the process into an
   abstract noun and make that the subject: "The daemon discovers new devices
   automatically," not "Discovery of new devices happens automatically."
+  When you revise, name only an actor that the source or the code confirms.
+  If the source leaves the actor unstated, keep the passive. A guessed actor is
+  a new claim.
 - **Use present tense.** "The request returns a token," not "will return."
 - **Use contractions.** "Don't," "it's," and "you're" read as human. Formality is
   not the same as precision.
@@ -35,7 +38,9 @@ below exists to serve one of those three people.
 
 - **One claim per sentence.** Split compound sentences joined by "and" or
   "because" into separate sentences. Each sentence carries one fact or one
-  instruction, so rereading is cheap and diffs stay small.
+  instruction, so rereading is cheap and diffs stay small. Carry the logical
+  link into the new sentence with "so," "as a result," or "that's why." A split
+  keeps the reason attached to what it explains.
 - **Cause before effect, condition before instruction.** State the fact, then the
   consequence, then the action. Don't bury the cause in a trailing clause the
   reader reaches after they've already been told what to do.
@@ -139,8 +144,11 @@ Reread the draft once and ask:
    subject?
 3. Does any sentence join two separate claims with "and" or "because"?
 4. Could you delete a sentence or paragraph without changing what the reader does
-   next? Delete it.
-5. Is anything left hedging, padding, or self-congratulating? Cut it.
+   next? Delete it. In reference and design docs, the reasons behind a
+   decision are what the reader needs next. Keep them.
+5. Is anything left hedging, padding, or self-congratulating? Cut it. Qualifiers
+   that bound a claim are precision, not hedging: only, up to, at most,
+   exactly, never, by construction. Keep them.
 6. Would this still be clear to someone reading English as a second language?
 
 Output the revised content, not a description of what you changed, unless the
@@ -148,3 +156,19 @@ user asked for a diff or an explanation.
 
 Clarity beats tone. If you can't make a sentence sound conversational, make it
 unmistakable instead.
+
+## When you revise existing text
+
+Fidelity beats style. Every rule above yields to what the source says. If a
+sentence can't follow a rule without changing its meaning, leave it as written.
+
+Before you finish a revision, run a fidelity check:
+
+1. Compare the original and the revision paragraph by paragraph.
+2. Confirm that the revision keeps every claim, stated reason, qualifier,
+   number or count, negation, named actor, and named audience from the source.
+3. Restore anything lost or changed.
+4. List source statements that look wrong or inconsistent for the user. Leave
+   the fix to them.
+
+The revision is done when every paragraph passes step 2.

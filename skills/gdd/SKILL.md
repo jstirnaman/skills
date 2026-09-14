@@ -13,3 +13,8 @@ Resolve the target first:
 - **A file path**: edit the file in place.
 - **Inline text**: rewrite it and output the result.
 - **Nothing**: ask what to write or revise.
+
+For a file or inline text, run the fidelity check in gdd-style's "When you
+revise existing text" section before you finish. For a file longer than about
+150 lines, dispatch a subagent to run the check with only the original and the
+revision.
