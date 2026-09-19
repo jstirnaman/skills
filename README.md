@@ -27,6 +27,7 @@ thread so Codex loads the updated skill inventory.
 | --- | --- | --- | --- |
 | `gdd` | `/gdd [target]` | `$jstirnaman-skills:gdd [target]` | Rewrites a file, a selection, or inline text in Google developer documentation style. Edits a named file in place. The one you type most. |
 | `gdd-style` | automatic, or `/gdd-style` | automatic, or `$jstirnaman-skills:gdd-style` | The style rules themselves. They govern any prose written for a reader, chat replies included, so typing it once turns the style on for as long as the rules stay in context. The agent also loads them when you ask for documentation. |
+| `write-docs` | automatic, or `/write-docs [page or topic]` | automatic, or `$jstirnaman-skills:write-docs [page or topic]` | Writes or revises a docs page for its content type (tutorial, how-to guide, reference, or explanation), and makes clear whether the reader or the system acts. Loads `gdd-style` first. |
 | `pr-body` | automatic, or `/pr-body` | automatic, or `$jstirnaman-skills:pr-body` | Structures a PR description as What changed / Why / Impact / Verification. |
 | `open-pr` | `/open-pr [base]` | `$jstirnaman-skills:open-pr [base]` | Reads the branch's diff and commit history, drafts the body with `pr-body`, then opens the PR. Writes `.pr.md` instead when no forge CLI is available. |
 | `prr` | `/prr [review file or instructions]` | `$jstirnaman-skills:prr [review file or instructions]` | Writes committable GitHub suggestion comments in `prr` reviews. |
