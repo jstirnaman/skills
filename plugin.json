@@ -20,7 +20,6 @@
     "prr",
     "git"
   ],
-  "skills": "./skills/",
   "extensions": {
     "com.openai": {
       "interface": {
