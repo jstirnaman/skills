@@ -56,6 +56,7 @@ State what you checked, and what the reviewer or CI still should.
   Don't omit the section, and don't guess.
 - Match the terse, factual tone the repository already uses in its PR
   conventions.
-- Apply the `gdd-style` skill's prose rules within each section.
+- If the `docs-skills` plugin is installed,
+  apply its `gdd-style` skill's prose rules within each section.
 - This skill governs body structure and content only.
   The `open-pr` skill gathers the facts and opens the PR.
