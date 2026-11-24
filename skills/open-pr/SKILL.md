@@ -15,7 +15,12 @@ Run `git status`, `git diff` against the merge-base with the base branch, and
 `git log` for the commits on this branch. The base branch comes from the
 arguments; default to the repository's main branch when the arguments name none.
 
-Every claim in the drafted body comes from that output.
+Code-change claims in the drafted body come from that output.
+Read current PR metadata before updating an existing PR, as required by `pr-body`.
+After commit hooks finish, inspect staged and unstaged diffs for formatting edits.
+Include intended hook edits in the commit before pushing.
+After an authorized push, verify that the remote branch SHA matches local `HEAD`
+and inspect the final working-tree status.
 
 ## 2. Draft the body
 
