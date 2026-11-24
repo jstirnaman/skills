@@ -1,6 +1,7 @@
 # jstirnaman-skills
 
-Skills for Claude Code and Codex that help you write and review pull requests.
+Skills for Claude Code and Codex that help you write and review pull requests,
+plus a personal principles index layered on pstack.
 
 The documentation-writing skills `gdd`, `gdd-style`, and `write-docs` moved to
 [influxdata/docs-skills](https://github.com/influxdata/docs-skills).
@@ -31,6 +32,8 @@ thread so Codex loads the updated skill inventory.
 | `pr-body` | automatic, or `/pr-body` | automatic, or `$jstirnaman-skills:pr-body` | Structures a PR description as What changed / Why / Impact / Verification. |
 | `open-pr` | `/open-pr [base]` | `$jstirnaman-skills:open-pr [base]` | Reads the branch's diff and commit history, drafts the body with `pr-body`, then opens the PR. Writes `.pr.md` instead when no forge CLI is available. |
 | `prr` | `/prr [review file or instructions]` | `$jstirnaman-skills:prr [review file or instructions]` | Writes committable GitHub suggestion comments in `prr` reviews. |
+| `principles` | automatic, or `/principles` | automatic, or `$jstirnaman-skills:principles` | Index of personal working principles, layered on pstack's. Loads each `principle-*` leaf when it applies. |
+| `principle-give-every-fact-an-owner` | read through `principles` | read through `principles` | A fact with no owner and no check goes stale. Encode it, move it to an owned place, or delete it. |
 
 `open-pr` and `prr` set `disable-model-invocation: true`, so the agent
 uses them only when you invoke them. In Codex, skills are not slash commands,

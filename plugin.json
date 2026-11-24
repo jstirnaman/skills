@@ -2,7 +2,7 @@
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "jstirnaman-skills",
   "version": "0.2.0",
-  "description": "Pull request skills: structured PR descriptions, PR creation, and committable prr review suggestions.",
+  "description": "Pull request skills (structured PR descriptions, PR creation, committable prr review suggestions) and a personal principles index layered on pstack.",
   "author": {
     "name": "Jason Stirnaman",
     "url": "https://github.com/jstirnaman"
