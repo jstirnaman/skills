@@ -28,22 +28,30 @@ A reader who doesn't know the backstory should be able to follow it.
 
 ## Impact
 
-Say who and what the change affects, and how.
+State the expected benefits and risks, concisely, for users and for the system.
+Write one bullet per benefit or risk, and label each one.
 
-- **Users and customers**: state whether behavior, output, or the UI changes for
-  them, and whether they can see the change happen.
-- **System behavior**: cover performance, error handling, backward
-  compatibility, data migrations, and config or environment changes.
-- **Neither**: say so directly. Write "No user-facing impact." An internal
-  refactor or a test-only change usually lands here.
+- **Benefit**: what gets better, and for whom.
+  Users and customers see changed behavior, output, or UI.
+  The system gains in performance, error handling, or maintainability.
+- **Risk**: what could break or get worse, and for whom.
+  Cover backward compatibility, data migrations, config or environment changes,
+  added cost or latency, and new failure modes.
+- When a change has neither, say so directly, for example
+  "No user-facing impact." An internal refactor or a test-only change usually
+  lands here.
 
 ## Verification
 
-State what you checked, and what the reviewer or CI still should.
+List the checks concisely, in two groups.
 
-- Automated tests you ran: which suites, and whether they're new or existing.
-- Manual validation you performed: the steps you took, and what you observed.
-- Checks still needed before merge, such as a staging smoke test.
+- **Performed**: each check you ran and what it showed.
+  Name the test suites, and say whether they're new or existing.
+  For manual checks, give the steps and what you observed.
+- **Still needed**: the checks this PR's scope calls for that haven't run yet,
+  such as a staging smoke test or a run of a changed workflow.
+  Size the list to the risks in Impact. Each listed risk needs a check in one
+  of the two groups.
 
 ## Rules
 
