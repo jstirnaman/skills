@@ -47,8 +47,15 @@ State what you checked, and what the reviewer or CI still should.
 
 ## Rules
 
-- Pull every fact from the actual diff and commit history.
+- Pull code-change facts from the actual diff and commit history.
+  Check workflow-state claims against current PR metadata.
   Don't invent changes, impact, or verification steps that didn't happen.
+- Before updating an existing PR, read its current body, title, base, head SHA,
+  open or closed state, and draft status. Recheck state claims immediately before
+  writing if the artifact could have changed. Preserve user-controlled fields
+  outside the requested edit, including draft status. If current metadata is
+  unavailable, omit state claims or mark them unverified.
+- After an authorized update, reread the PR to verify the saved body and state.
 - Keep What changed factual.
   Keep Why explanatory without selling the change.
   Don't blend the two.
